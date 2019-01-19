@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+     docker.withRegistry('https://index.docker.io/v1/', 'rajiano') {
        def app = docker.build("rajiano/sony_interview:${commit_id}", '.').push()
      }
    }
